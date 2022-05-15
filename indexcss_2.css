@@ -1,0 +1,30 @@
+p{
+    font-size:large;
+    color:green ;
+}
+mark{
+    background-color:yellow;
+    border:solid black;
+}
+a:link{
+    color:blue;    
+}
+pre{
+    border:solid rgb(5, 68, 15);
+    margin: 15px;
+}
+h{
+    color:purple;
+    font-size: large;
+}
+body{
+    background-color:coral;
+    background-image:url(MidnightTrees.jpg);
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+}
+table, th, td{
+    border:1px solid black;
+    border-collapse: collapse;
+}
