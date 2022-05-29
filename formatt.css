@@ -1,0 +1,63 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+}
+/*This for styling a header*/
+header{
+    background-color: coral;
+    padding: 30px;
+    text-align: center;
+    font: size 35px;
+    color:white;
+}
+/*This is create two floating boxes*/
+nav{
+    float: left;
+    width:30% ;
+    height: 300px;
+    background-color:#ccc;
+    padding: 20px;;
+}
+/*styles list inside of an menu(idk)*/
+nav ul{
+    list-style:none;
+    padding:0;
+}
+article{
+    float:right;
+    padding: 15px;
+    width:70%;
+    background-color: #f1f1f1;
+    height: 300px;
+}
+h1{
+    text-align: center;
+   /* background-color:navy;*/
+    color:red;   
+    padding: 0%; 
+}
+h2{
+    text-align:right;
+    color:aqua;
+}
+body{
+    border: solid black;
+}
+mark{
+    background-color: yellow;
+    border:solid black;
+}
+aside{
+    border:solid black;
+    padding: 30px;
+    color: white;
+}
+footer{
+    text-align: center;
+    color: violet;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    float: right;
+}
