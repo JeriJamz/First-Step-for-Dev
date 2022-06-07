@@ -1,0 +1,20 @@
+body{
+    background-color: aqua;
+    
+}
+h1{
+    font: size 16px; ;
+    color:blue;
+}
+p{
+    font-size: larger;
+    color:green;
+}
+mark{
+    background-color: yellow;
+    border-color: red;
+    border:solid  2px ;
+}
+a:link{
+    color:salmon;
+}
