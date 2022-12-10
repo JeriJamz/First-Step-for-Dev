@@ -1,0 +1,32 @@
+C Notes(100!!!):
+ machine lingo is 1 and 0, If i get it right C is one of the first higher lvl lingos
+ {} this is called the body of the function
+ declaration statment: are line " int a, s" 
+'//' this is how to make a comment in C
+ You have to put the ; at the end of a line to indicate that it is over with
+ apparently for a computer to run code. it has to loaded in the memory(primary storage)
+ why i think c doesn't have a Class orentied system
+ My favorite! data types:
+    float-point-number are called real numbers(deciamals), names are another, integers are whole numbers
+    numeric refers to numbers
+    string refers to non-numeric data
+    Constants:
+        so for one character constant is delimited by single  qoutes and double qoutes for string
+        if i get this right Constant turn a variable into a inmmutable data structure like a dictionary in python
+    Characters:
+        # this is gonna be fun
+        simple run down:(
+        digits from 0-9, An uppercase or lowercase letter(A-Z), special symbol,) 
+#side note there are statments!!!
+The statment:
+    (not a comment)#include <stdio.h> is called a compiler directive# this provides the infomations the compiler need to compiler your program
+    the instructions for input/output instructions are provided by the standard functions
+    any C program that uses the input/output(printf) must inform the compiler to 'include' the declaration in the files stdio.h(the compiler will shit itself it you dont)
+The C programs consists of more than one functions(or subprograms):
+    main is one:
+        the () this necessary in C. it helps the programs understand what is going on and also just incase it needs an arguement
+    the int before main let C know which type of value to return back
+    the body part of the function is where the actual code is written:
+        {} indicates the body:
+            one or more statments are called a block or compund statment
+# this is the end of today notes(well right now)
