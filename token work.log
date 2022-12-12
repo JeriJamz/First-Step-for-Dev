@@ -1,0 +1,15 @@
+token work
+
+delimiter apparently seperate diffrent token or group of tokens, so its easier for the parser to work
+
+Token       type
+int         reserved word
+main        identifier
+(           left bracket, delimiter #issa bracket, huh
+)           right bracket, delimiter
+{           left brace, delimiter
+a           identifier
+,           comma, delimiter
+;           semicolon, delimiter
+14          constant
+
