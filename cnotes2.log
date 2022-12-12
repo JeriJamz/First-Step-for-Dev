@@ -1,0 +1,27 @@
+Cnotes 2:
+so'\n' is how yo make a newline#oddly familiar to python
+printf takes one two functions:
+    format string(the string values), formatt specification(%d):
+        when it comes to format specification i think it gets replaced by the value of a variable
+            and this %d can take on more that one argument apparently
+/**/ is how to make a multiline #ngl need to add this everytime i make a lingo
+#----Variables-----
+vars are simple so far kinda like a weird js and python mix
+    cant forget to add the variables to the end of the declration line?
+when a program has a variable that use and integer you need the 'int' in the declareation statment #like in var.c the int a, b, sum;
+    all variables must be declared before you write and use the actual program
+character sets in program languges are called tokens
+so C uses something called ass-key(ASCII, American Standard Code for Information Interchange )
+# use the regular American keyboard 
+    Also use something called the control character.
+        backspace, tab, line feed, form feed, and carriage return# im in danger
+think of code as a nothing but groups of tokens and delimiters
+    far as the machine is concern the only thing that is important is the order of the tokens and delimiters(layout is more for the people)
+        unlike python you dont have to use one line for one statement
+        you can write one statement over multi lines as long as you end the statment with a semicolon
+        spaces also are all that important. only error example i can think of is putting a space btw number(23 -> 2 3)
+#not gone talk about all the tokens
+Identifies:
+    user Identifies are are names the programmers made for things like variables, symbolic constants, function names
+        It can start with an underscore or letter 
+            cant start with a digit but can be included
