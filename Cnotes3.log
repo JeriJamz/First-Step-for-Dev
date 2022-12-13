@@ -1,0 +1,18 @@
+Cnotes3
+Basic data types:
+    int:
+        whole numbers
+        when storing the first slot is 0 not 1#this is based off boomer math so 0 is the root not 1(that common core math)
+        #fun fact apparently the size of your int will affect storage
+        so int are stored in 16 bits( 2 bytes(so 8bits per 1 byte)) #another fun fact 8bits is a bytes
+            this means in range of(-32,768/32,768)#starting to see sum real diffrence btw old computers and new ones
+            #another funfact 32bits(4 bytes) gives you a storage range of -2,147,483,648/2,147,483,648, which i think thats the diffrence btw an old and new computers
+        ex. (int h) the int is a declaration for allocation space for h not initializing it 
+        the remainder module is great it c bc when you divide in c it rounds you need to use the % module too
+        also c uses order of operations.#thank god
+
+each char takes up a print colum, but you can tell C how many column to use (printf("%5d",n);) 
+    if you input something smaller than the requirements C will add leading spaces(right justified)
+        you add a minus sign(-) itll add the leading spaces in the back(left justified)
+    if your input is larger than C still is gonna print it 
+    
