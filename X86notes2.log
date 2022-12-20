@@ -1,0 +1,62 @@
+X86notes2:
+Other Registers:
+    some registers have special meaning
+    some have system wide importance and cannot be modified(unless the OS do it)
+    programmers have access to the rip register(64-bit)
+        stores an address of the next instructions to be executed 
+    [rflags] is another accessable register
+        stores flags which relect the current program state
+            examp{what was the result of the last Arithmetic problem
+            (was it a negative? did an over flow happened?)}
+        its smaller parts are called eflags and flags
+    some registers are made to handle:
+        floats or specialized parallelized instruction(which allows them to work on multiple pairs of operands at the same time):
+            #so this help with decode the algorthims of multimedia(wateva that means)
+            also these instructions are 128-bit wide(is it broken up?) and are name xmm0-xmm15
+    [model-specific registers] these are non standard registers that became standard 
+system register:
+    these a registers that focus only on OS:
+        store a system wide data structure
+    it helps the isolations of systems and applications 
+    mangage resources 
+    its importance no one can modify them
+        #this is actually the framework at hand
+        #ig this is where privilege mode really kicks
+    a list of some of these S.Registers:
+        [cr0, cr4] store flags related to diffrent processor and virtual Memory 
+        [cr2,cr3] are used to support virtual memory 
+        [cr8](aliased as tpr) is used to preform a fine tuning of the interrupts mech.
+        [efer] is another flag register used to control processor mode and extensions(long mode and system call handling)
+        [idtr] stores the address 
+        [gdtr and ldtr] store the address of the descriptor tables
+        [cs,ds,ss,es,gs,fs] are so callled [segement register]:
+            this mechanism and legacy and somethin people wont give up. it help implement the privileged mode 
+Protection Rings:
+    designed to limit applications capabliltites for security and robustness reason
+    #surprise surprise a linux mfs came up with(Multics OS) 
+    each rings corresponds to a certains level of privilege
+    current privilege lvl is stored ina special register
+    intel only has 4 levels of protection rings
+        ring-0 is the most privilege ring-3 is the least privilege but the middle two are made for PS and drives
+    long mode:
+        current state of protection is stored in cs and copied into the ss
+            only can be changed when interruptions and sytem calls 
+                this is done so no program can just write code anywhere
+Hardware Stack:
+    stack is a data structure ,a container with 2 operations:
+        a new element can be placed on top of the stack(push)
+        top element can be taken away from the stack(pop)
+    there is hardware for this
+        its on the same memory as the virtual on 
+   -0- this is sort a emulations that is implemented with two machine instruction(push and pop, register (rsp))
+    rsp hold the top-most element
+    here how the instructions work:
+        * push arguemnt
+            1) depend on arguemnt size(only 2,4,8 bytes), rsp value is decrease bt 2,4,8
+            2) an argument is storeed in memeory starting at the address, taken from modified rsp
+        * pop arguemnt
+            1) The topmost stack element is copied into the register/memeory
+            2) rsp is increased by the size of it arguement. An augmented architecture is
+            represented
+
+    

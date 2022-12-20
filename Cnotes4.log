@@ -1,0 +1,16 @@
+Cnotes 4:
+Floats:
+    can call floats with floats or double.
+    #*tech points(tp) ig guess floats are usally in a 32 bit numbers with 6\7 digits
+    double is stored in 64(so float is in 32 naturally) and has about 15 number *#
+    a float is naturally a double unless its followed by f or F(that the float token)
+    # 3.75 is a double but 3.75f is a float (is 3.1238753186453515 a float w\o the f)
+    %f is how print a float or double
+    doubles are ussally 6 deciamls places(depending on the compiler.) if its too large it would be rounded
+    %f is already a predetermin number of deciamal points(usally 6)
+    you can limit the decimal place and feild width
+        %6.2f will give you a field width of 6 and dec limit of 2 
+            add a 0 upfront(%0.2) and it wont return a field width 
+        +,-,*,/ are all expersions that can be used with floats 
+    
+

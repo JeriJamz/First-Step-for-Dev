@@ -1,0 +1,53 @@
+Guide on General Purpose Registers 
+
+name    Alias   Description
+
+r0      rax     sort of a accumulator used in Arithmeticinstructions. for example
+                div is used to divide two ints. it accepts on operand and uses rax as
+                the second one. after that rcx(r1) a big 128-bit number(gotta break that up)\
+                rdx(r2) and rax(r0) is divide by rcx(r1) and stored in rax(r0)
+
+r3      rbx     Base register. Was used for base addressing in early processor models
+
+r1      rcx     Used for cycles(can keep time in a way)(like loops)
+
+r2      rdx     stores data during input/output cycles
+
+r4      rsp     Stores the address to the topmost element in the hardware stack
+
+r5      rbp     stacks frame base(gonna talk about later)
+
+r6      rsi     Source index in string manipulation commands(movsd)
+
+r7      rdi     Destination index in string manipulation command(movsd)
+
+r8      N/A     N/A 
+
+r9-r15  No       Appeard later(Prolly round the same time 32-bit was a thing). used to store temporal variables
+                 (but sometimes used implicity like, r10, which saves a spu flag when syscall instruction is executed )
+
+Decomposistion of register(accessable)
+
+----------------
+rsi(64) #source of index for string manipulation commmands
+esi(32)
+si(16)
+sil(8)
+
+----------------
+rdi(64) #destination for the string manipulations command 
+edi(32)
+di(16)
+dil(8)
+
+-----------------
+rsp(64) #stores the address of the topmost element in the hardware stack 
+esp(32)
+sp(16)
+spl(8)
+
+------------------
+rbp(64) #stack frame base 
+ebp(32)
+bp(16)
+bpl(8)

@@ -1,0 +1,24 @@
+Date Types      Size    Typical use
+Byte             8      Characters(strings,?),small integers
+Word             16     Characters,integers
+DoubleWord       32     Integers, single-precision flaoting points
+QuadWord         64     Integers, Double-precision floating-points
+Double QuadWord  128    Packed integers, packed floating point
+
+The band-aids:
+
+problem                                 Soulution
+
+Nothing is possible w\o querying slow   Registers,caches
+Memory 
+
+Lack of interactivity                   Interrupts 
+
+No Support for code Isolation in        Hardware Stack 
+in procedures, it for context saving 
+
+Multitasking: any program can execute   Protection Rings 
+any instructions 
+
+Multitasking: programs are not          Virtual Memory 
+Isolated from one another

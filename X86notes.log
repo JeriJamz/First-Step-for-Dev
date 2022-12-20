@@ -1,0 +1,97 @@
+X-86 notes:
+for a lil second just going to talk about. real low level comp function
+modern comp work on Von Neumann Architecture#this was invented in the 30's 
+    a computer consits of one memory bank and one processor which is connected to a bus(wateva dat is)
+    CPU(Central Processing Unit):
+        execute the instrusctions, feteched from memory by the [Central Unit#*I can underline so u get it*#]
+        [Arithmetic Logic Unit(ALU)] preforms the need computations.
+    Memory Stores the data 
+    There are sum key features:
+        Memory is only stored in bits(0,1)
+        Memory stores both encoded instructions and data to operate.(The comp can distinquish the data it all bit strings)
+        Memory is orgainzied into cells which are label with thier indices in numerical order,
+            Memory cells size may vary depending on the computer
+            Modern Comupters like to make bytes the storage unit 
+        program execute its instructions in order unless its told to jump
+Assembly Lingo is that consists of mnemonics for each possible binary encoded instruction 
+    this makes programing in machine code easier bc:
+        you dont have to kno every single 1,0 but phrases for names and parameters
+there are some drawbacks(ofc we gone talk about them):
+    this isnt interactive at all. a programmer is limited by the memory(bytes or bits)
+    #* is this whats wrong with moderen computers that the memory cant keep up with the processor?*#
+    it has a problem with multi tasking:
+#just a little side note each binary int is a bit(1(this is a bit),0(this is a bit),01(this is two bits))
+        ex if u was using a printer the cpu would have to wait for the printer to finish its output before moving on to the next instrusction
+    the purpose of a OS(Operating System)  is to mangage resources
+    # having too many task running at once can cause unexpected errors
+    #bc how hectic it can get when the cpu multi process. we prohibit all user applications from exceutins some instructions that is related to input\output or system management
+    There a bottelneck in modernday comp. CPU outclass the memory:
+        A Fundamental terriable problem to have in a Architecture where the memory is dominant
+
+So intel tried to create ways around this bottleneck(Bell co. would of made a new comp):
+    Registers:
+        Memory cells are placed directly on the CPU 
+        circuit wise they are faster 
+        they dont use the bus
+        small response time(usally a couple of clock cycles)
+    Hardware Stack:
+        A data Structure
+        supports two operations:
+            pushing an element to the top 
+            and poppinng the top-most element
+                it does this on top of memeory, through certain instructions and Registers
+                    pointing at the least stack element
+        a stack is not only for computions but also to store local variables and implement funtion(sequence)
+Interrupts(My favorite Ctrl + C):
+    this allows you to change the execution order 
+    most part interruptions are inputed by the user
+    Auto interruptions:
+        A signal from an external device
+        Dividing by 0
+        Invalid instruction(CPU cant read it in binary)
+        (a)ttempts tp execure a privilege instruction in a non-privileged mode 
+    Protection Rings:
+        each ring allows a certain set of instrusctions
+        0-th rings allows the executions of any instruction from the entire CPU instruction 
+        the third  allows the safest instructions
+    Virtual Memory:
+    im thinking the  cloud?
+Registers:
+    Memory cells in the CPU 
+    most programs that are wrote can exexute things from the register 
+    Registers are based on transistors(while memory has condensers)
+        #put these on the memeory
+    reasons why its not on the memory:
+        They are more expensive
+        instruction encode the register number as part of their coders. To address more registers the instructions have grow in size 
+        registers add complexity to the circuts tp address them. It harder to speed up(its not gonna like if you speed it up to 5GHz)
+    they will slow down yo Comupter bc they cant be speed up as easy
+    [Locality of reference] is what help make registers fast#this is only a things bc everyone uses C based programs 
+    there are two ways:
+        [Temporal Locality] means the access to one address are likely to be close in time
+        [Spatial loaclity] means after accessin an address X the next memeory will be close(when using variables)
+            these properties are not binary(U can write locality using strong or weak weaker locality)
+        the data is worked from the register then flushed into the memory 
+        data in memory is rarely used b\c most programs keep it in the register
+        giving all the data to the register can cause a problem 
+            well have to fetch data from there(this Architecture isnt build for that)
+            if all the data were in registers. it would have to spill into the memory any way 
+General Purpose of Registers:
+    ima assume these are the name of ceertains bit commands
+    the 64-bit resiter names are r0-r15 
+    the first 8 have interchangable names:
+        example r1 is also rcx(the c stands for cycle) 
+            there is an instructions lopp which only uses rcx and doesnt accept no other operands.
+    you can adress a part of register, just add the appropritate suffix to the regsiter name:
+        d for double word - lower 32 bits
+        w for word- lower 16 bits
+        b for bytes - lower 8 bits
+        the Examp:
+            r7b is for the lowest byte for r7
+            r3w consists of the lowest two bytes in r3 
+            r0d consists of the lowest four bytes of r0 
+    alt names will also get you into the lowest parts of a regsiter
+    the first four you can get the names for but the other four u cant get access to their second lowest bytes
+    lowest bytes naming slightly diffrent differs slightly for rsi,rdi,rsp, and rbp 
+        smallest parts of rsi and rdi are sil and dil 
+        smallest parts of rsp and rbp are spl and bpl

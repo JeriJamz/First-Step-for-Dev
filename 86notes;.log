@@ -1,0 +1,8 @@
+X-86 the deep-end:
+# fun fact 32-bit is single percision floating points, 64 is for double
+(1)Fundamental Data Types:
+The power of two is a really good priniple to remember(gone dbl up(32-64-128))
+data types are numbered right to left(idk like binary 001(being read one, zero,zero))
+the least significant byre is stored in the lowest memory Byte
+    this type of storage(inmemory) is called endian
+    
