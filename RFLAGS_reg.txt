@@ -1,0 +1,34 @@
+gonna quickly talk about rflag
+
+RFLAGS regs are contain status bits(flags):
+	it will tell the processor the results of:
+		arithmetic, logical or comparitive operarions
+some of the bits r primarily used by the O.S
+	
+bit Position			Name						Symbol			use
+
+0				Carry Flag					CF			Status
+1				Rserved									1
+2				Parity Flag					PF			Status
+3				Reserved								0
+4				Auxiliary Carry Flag				AF			Status
+5				Reserved								0
+6				Zero Flag					ZF			Status
+7				Sign Flag					SF			Status
+8				Trap Flag					TF			System
+9				Interrupt Enable Flag				If			System
+10				Direction Flag					DF			Control
+11				Overflow flag					OF			Staus
+12				I/O Privilage Level Bit 0 			IOPL			System
+13				I/O Privilage Level Bit 1 			IOPL			System
+14				Nested Task					NT				System
+15				Reserved									0
+16				Resume Flag					RF				System
+17				Virtual 8086 Mode				VM				System
+18				Alignment Check					AC				System
+19				Virtual Interrupt Flag				VIF				System
+20				Virtual Interrupt Pending			VIP				System
+21				ID Flag										System
+22-63 				Reserved									0
+
+

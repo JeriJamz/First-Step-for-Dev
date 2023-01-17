@@ -1,16 +1,52 @@
-Cnotes 4:
-Floats:
-    can call floats with floats or double.
-    #*tech points(tp) ig guess floats are usally in a 32 bit numbers with 6\7 digits
-    double is stored in 64(so float is in 32 naturally) and has about 15 number *#
-    a float is naturally a double unless its followed by f or F(that the float token)
-    # 3.75 is a double but 3.75f is a float (is 3.1238753186453515 a float w\o the f)
-    %f is how print a float or double
-    doubles are ussally 6 deciamls places(depending on the compiler.) if its too large it would be rounded
-    %f is already a predetermin number of deciamal points(usally 6)
-    you can limit the decimal place and feild width
-        %6.2f will give you a field width of 6 and dec limit of 2 
-            add a 0 upfront(%0.2) and it wont return a field width 
-        +,-,*,/ are all expersions that can be used with floats 
-    
+#some random notes i take while reading X86(64) notes
+X-86 Notes(ASM):
+imp ex():
+    48 C7 C1 30 F8 FF FF    mov rdx, 0ffh       00000000000000FFH
+    48 81 C1 30 F8 FF FF    or rdx, 80000000h   FFFFFFFF800000FFH
+
+    48 C7 C2 FF 00 00 00     mov rdx, 0ffh      000000000000000FFh
+    49 B8 00 00 00 80 00 00 00 00   mov r8, 80000000    0000000080000000h
+    49 0B D0                  or rdx,r8         0000000080000000FFH
+
+exit()
+pick up where i left off. I was learning that you can immediatly call the 64 - bit register in ASM 
+    apparently it doesnt operate in the highest bit register(show a lil more light on the hardware stack)
+so you have to call out certain registers/ oh and some of these have no gen purpose so u can get creative:
+    i hear a register dedicated for MTG strats
+    I.E r8 in this ex()
+#time to break this down for a better understanding
+the mov rbx, 0ffh:
+    init the RDX reg(which is cycle storage/ so can you also put numbers here instead of the RAX)
+    #*Small rant*#
+    #*I kno w/ RCX and RDX i can basically make a clock and run clock spd
+    yada yada but can i also store number and have it where it cycle and store number
+    actually now i think about it, why tf wouldnt
+    also i think you can bitcoin mine hella effieciently with ASM*#
+its followed by an or operand(or rdx, 80000000h):#yo glad to kno there operand in asm, we can have fun
+    this does sum magic im read about later,
+    that operand turns 0x80000000 to 0xFFFFFFFFF8000000
+now that isnt the final result/ gotta make it into a 64 bit value
+mov r8, 80000000h loads a 84 bit int(0x0000000080000000000)#its that crazy reg dialect
+#so mov might only be a 64 bit operand 
+the mov operand make sure or rdx, r8 instruction yields the expected value 
+#*
+    ~~~SiDE NotES(insert the meme)~~~
+    books gives me hella sides notes
+    in 32 bit if you us a number this size you gotta split it up:
+        ie a jmp or call function.
+        now you got about 2+-GB to work with:
+            it aint alot once you account the internert, video game, porn, photo, then bidness stuff
+            then actual computer stuff
+        there are function that can help with getting outside that window
+            #but ill nerd out later
+*#
+
+#*
+    actually important side note 
+    another diffrence is how output is effected
+    when using manipulated 32 bit reg in a 64 bit platform
+    the high order 32 bit are zeroed so you can use the for Arithmeticinstructions
+
+*#
+#now i want a 32 bit book
 

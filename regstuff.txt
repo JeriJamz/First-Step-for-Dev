@@ -1,0 +1,8 @@
+breakdown of the reg
+8bit				16bit				32bit				64bit
+
+add al, bl			add ax, bx			add eax, ebx		add rax, rbx
+cmp bl, [r15]		cmp dx,[r15]		cmp edx, [r15]		cmp rdx, [r15]
+mul r10b			mul r10w			mul r10d			mul r10
+or [r8+rdi],al		or [r8+rdi], ax		or [r8+r10],eax 	or [r8+rdi],rax
+shl r9b, cl			shl r9w, cl			shl r9d, cl 		shl r9, cl

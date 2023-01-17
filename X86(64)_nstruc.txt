@@ -1,0 +1,50 @@
+ A list of Gen instructions im going to use in ASM(64)
+
+Mnemonic 					Instruction Name
+
+abc							Integer addition with carry#ofc there no carry. these is a fancy strobe light. not a calculator
+add							Integer Addition
+and 						Bitwise AND
+bs[f|r]						Bit Scan Forward, Bit Scan Reverse
+b[t|tr|ts]					Bit Test; Bit Test and Reset; Bit Test and Set
+call						Call Procedure
+cld							Clear Direction flag(RFLAGS.DF)
+cmovcc						conditional Move
+cmp							Compare Operands
+cmps[b|q|d|q]				Compare String Operands
+cupid						Query Cpu Identification and Features Information
+c[wd|dq|do]					Convert Operand
+dec							Decrement Operand by 1
+div							Unsigned Integer Division
+idiv						Signed Integer Division
+imul						Signed Integer Multiplication
+inc							Increment Operand by 1
+jcc							Conditional Jump
+jmp							Uncondtional Jump
+lahf						Load Status Flags into Register AH
+lea							Load Effective Address
+lods[b|w|d|q]				Load String Operand
+mov							Move Data
+mov[sx|sxd]					Move Integer With Sign Extenstion
+movzx						Move Integer With Zero Extenstion
+mul 						Unsigned Integer Multiplication
+neg							Two's Compliment Negation
+not							One's Complement Negation
+or							BitWise Inclusive OR
+pop							Pop Top-of-Stack Value to Operand
+popfq						Pop Top-of-Stack Value to Rflags
+push						Push Operand onto Stack
+rc[l|r]						Rotate Left With RFLAGS.CF; Rotate Right With RFLAGS.CF
+ret							Return From Procedure
+re[p|pe|pz|pne|pnz]			Repeat String Operation#whatever instructions u had loaded
+ro[l|r]						Shift Logical Left; Shift Logical Right
+sahf						Store AH into Status Flags
+sar							Shift Arithmetic Right
+setcc						Set Byte on Condition
+sh[l|r]						Shift Logical Left; Shift Logical Right
+sbb							Integer Subtraction With Borrow#?
+std#Noice**#				Set Direction Flag(RFLAGS.DF)
+stos[b|w|d|q]				Store String Value
+test						Test Operands(Set Status Flags)
+xchg						Exchange Source and Destination Operand Values
+xor							Bitwise Exclusive OR
