@@ -1,0 +1,13 @@
+Cnotes6:
+#*While I am thinking about it. I been wondering. Can I put arguments with the naming constants?
+if so that basically makes it a class and if so it would be an interesting way of making classes*#
+*While loops:
+    #the book open my eyes to something. Required repition logic --> while loops
+    import WhileLoops_skel()
+        while <condition> do
+            statment(s)
+        endwhile
+    exit()
+    if the first value is the condition that terminates the program,
+    the program not really gone start
+    

@@ -1,0 +1,36 @@
+Cnotes5:
+I see why certain Principles(not laws) came from C:
+    Reading the section on if\else and while loops is eye opening
+import if\else.skel():
+    if (<condition>) statement;
+        else(<condition>) statement;
+#for blocks use this formatt
+    if (<condition>){
+        statement
+    }
+        else(<condition>){
+            statement
+        }
+#semicolon doesnt happen until your done with each statement
+#do it inside the {Curly Brackets;} not outside
+#again for each statement
+exit()
+*Program Testing:
+    This is mainly about debugging#My Favorite humbling experince
+    when program testing you need to try out every variable:
+        get random at points bc people are random, life is random and computers dont know how to handle it
+        plus you just might be plain wrong#we all are
+        Test the threshold of your code:
+            if you written a limit or threshold test,
+            your code at the threshold to see how it will handle it and,
+            what the output it
+        Most time it came to debugging. it more of grammatical(syntax) error,
+        than an actual functionality problems#Unlike my coding lingo. That Shit Broke.
+    Also it helps just to write the code write the first time but were human,
+    after 50 lines were gonna mess up also other tools help like:
+        Utube, Google and Documentations
+Symbolic/manifest/named Constant:
+    #*When I talk trash about Java and Js this what i mean, Java is C Son that tries his hardest
+    Const sucks in Js. C grandson(python) got it right with class*#
+    A variable that wont change#helps with thousands of lines of code
+    
