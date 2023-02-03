@@ -1,0 +1,18 @@
+MOOOOREEEE SEEEEEMMMMMm YEAAAAAAAAAAAAAAA
+I know its been a while but I been struggling with config the compiler
+Local Lables:
+    | . | usually Identify the local scope
+    You can reuse the label names as long as it doesnt cause a conflict
+
+Relative Addressing:
+    lea rsi, [code + rax]:
+        this is an example of relative addressing
+        [] these denote indirect addressing:
+            the address is written in here
+            mov rsi, rax - copies rax into rsi
+            mov rsi, [rax]- copies memory content(8 Sequential bytes):
+                the reason we know this is copies 8 bytes is bc mov copies,
+                everything to a tee. if rsi is 8bytes then mov will copy 8bytes
+
+    mov and lea have a slight diffrence:
+        lea means load effective address
