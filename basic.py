@@ -24,7 +24,7 @@ class Error:
 
     def as_string(self):
         result = f"{self.error_name}: {self.details}"
-        return result
+        Return result
 
 class IllegelCharError(Error):
     def __init__(self, error_name, details):
@@ -52,7 +52,7 @@ class Token:
 
     def __repr__(self):
         if self.value: return f'{self.type}:{self.value}'
-        return f'{self.type}'
+        Return f'{self.type}'
 
         #this gives token a representive so when the token called on it'll print the type and then
         #the value and if it doesnt have a value itll print the type instead
@@ -100,9 +100,9 @@ class Lexer:
             else:
                 char = self.current_char
                 self.adv()
-                return[], IllegelCharError("'" + char + "'")
+                Return[], IllegelCharError("'" + char + "'")
 
-        return tokens, None
+        Return tokens, None
 
 def make_number(self):
     num_str = ''
@@ -118,9 +118,9 @@ def make_number(self):
         self.adv()
 
     if dot_count == 0:
-        return Token(TT_INT, int(num_str))
+        Return Token(TT_INT, int(num_str))
     else:
-        return Token(TT_FLOAT, float(num_str))
+        Return Token(TT_FLOAT, float(num_str))
 
 
 
@@ -132,7 +132,7 @@ def run(text):
     lexer = Lexer(text)
     tokens, error = lexer.make_tokens()
 
-    return tokens, error
+    Return tokens, error
 
 delay_print('My First attempt at writing a program.\n(name is still top secrect.)\n')
 delay_print('For now the program can use basic math operators.\n')
