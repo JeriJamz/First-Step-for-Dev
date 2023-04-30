@@ -18,7 +18,7 @@ class Error:
     def as_string(self):
         result = f'{self.error_name}: {self.details}'#should return the error name: details
         result += f'File {self.pos_start.fn}, line {self.pos_start.ln + 1}'
-        return result
+        Return result
 
 class IllegalCharError(Error):
     def __init__(self, pos_start, pos_end, details):
@@ -44,10 +44,10 @@ class Position:
             self.ln += 1 
             self.col = 0
 
-        return self
+        Return self
     
     def copy(self):
-        return Position(self.idx, self.ln, self.col, self.fn, self.ftxt)
+        Return Position(self.idx, self.ln, self.col, self.fn, self.ftxt)
 
 #########################
 # TOKENS
@@ -125,7 +125,7 @@ class Lexer:#this is what read the text
                 self.adv()
                 return [], IllegalCharError(pos_start, self.pos,"' " + char +" '")
 
-        return tokens, None
+        Return tokens, None
 
 
     def make_number(self):
@@ -142,9 +142,9 @@ class Lexer:#this is what read the text
                 self.adv()
             
         if dot_count == 0:
-            return Tokens(TT_INT, int(num_str))
+            Return Tokens(TT_INT, int(num_str))
         else:
-            return Tokens(TT_FLOAT, float(num_str))
+            Return Tokens(TT_FLOAT, float(num_str))
 
     
 ############################
@@ -155,4 +155,4 @@ def run(fn, text):
     lexer = Lexer(fn, text)
     tokens, error =  lexer.make_tokens()   
 
-    return tokens, error
+    Return tokens, error
