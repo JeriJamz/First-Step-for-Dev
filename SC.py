@@ -73,7 +73,7 @@ class Tokens:
 
     def __repr__(self):
         if self.value: return f'{self.type}:{self.value}'#if token has a value it will print the 'type:value'
-        return f'{self.type}'#if it doesnt have a value it will print jus the type
+        Return f'{self.type}'#if it doesnt have a value it will print jus the type
 
 ############################
 #LEXER
@@ -123,7 +123,7 @@ class Lexer:#this is what read the text
                 pos_start = self.pos.copy()
                 char = self.current_char
                 self.adv()
-                return [], IllegalCharError(pos_start, self.pos,"' " + char +" '")
+                Return [], IllegalCharError(pos_start, self.pos,"' " + char +" '")
 
         Return tokens, None
 
